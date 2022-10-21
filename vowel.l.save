@@ -1,0 +1,24 @@
+%{
+#include<stdlib.h>
+#include<stdio.h>
+int vowels=0,consonants=0;
+%}
+%%
+[AEIOUaeiou]  {vowels++;}
+[A-Z a-z]     {consonants++;}
+%%
+main()
+{
+yyin=fopen("sample.txt","r");
+yylex()
+printf("no of lines=%d\n",lines);
+printf("no of words=%d\n",words);
+printf("no of letter=%d\n",letter);
+printf("no of digits=%d\n",digits);
+printf("no of spl_character=%d\n",spl_character);
+
+}
+int yywrap()
+{
+return 1;
+} 
