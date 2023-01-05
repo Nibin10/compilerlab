@@ -1,0 +1,17 @@
+lex program
+
+
+gedit fname.l
+lex fname.l
+gcc lex.yy.c
+./a.out
+
+
+yaac program
+
+
+gedit fl.l
+gedit fy.y
+yaac -d fy.y
+lex fl.l
+gcc lex.yy.c y.tab.c -ll
